@@ -1,0 +1,23 @@
+.masthead {
+    background-attachment: scroll;
+}
+
+@media (min-width: 992px) {
+    .masthead {
+        background-attachment: fixed;
+    }
+}
+
+#locale {
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+@media (max-width: 991px) {
+    #locale {
+        background-attachment: scroll;
+    }
+}
+
