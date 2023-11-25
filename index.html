@@ -1,10 +1,10 @@
 <!DOCTYPE html>
-<html data-bs-theme="light" lang="en">
+<html data-bs-theme="light" lang="pt-br">
 
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
-    <title>Home - teste para o projeto</title>
+    <title>Home - teste para o projeto v3</title>
     <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic&amp;display=swap">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Cabin:700&amp;display=swap">
@@ -34,10 +34,11 @@
             <li class="nav-item nav-link">
                 <a class="nav-link" href="#contact">Contato</a>
             </li>
-            <li class="nav-item nav-link">
+            <!--<li class="nav-item nav-link">
                 <a class="nav-link" href="#pesquisar">Pesquisar</a>
-            </li>
+            </li> comentado pq ele nao ta ficando em foco na navbar-->
           </ul>
+        </div>
         </div>
       </nav>
     <header class="masthead" style="background-image: url('#');">
@@ -70,6 +71,8 @@
         <div class="container">
             <div class="col-lg-8 mx-auto">
                 <h1 id="students">criado com amor ♥ por estudantes da UCB</h1>
+                <!-- tenta dar uma estilizada nesse mapa também pra ele caber na tela, pode usar um arquivo css só pra ele
+                e usa como base o parallax.css pq ele engloba os dois tipos de tela com pouco codigo-->
                 <iframe class="border border-black border border-5 rounded" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3837.8381009577233!2d-48.03271272389806!3d-15.86510422470214!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x935a2d97a15b0507%3A0x3c3e4472ee75d834!2sUniversidade%20Cat%C3%B3lica%20de%20Bras%C3%ADlia%20-%20C%C3%A2mpus%20Taguatinga!5e0!3m2!1spt-BR!2sbr!4v1700065172420!5m2!1spt-BR!2sbr" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
             </div>
         </div>
@@ -80,10 +83,11 @@
                 <div class="col-lg-8 mx-auto">
                     <h2>Contato</h2>
                     <div class="gap-4 d-flex justify-content-center">
+                        <!-- tem que dar uma olhada nesses botoes na versao mobile pq eles tao ficando fora da tela-->
                         <button class="btn btn-primary btn-mt btn-default border rounded" target="_blank" type="button" href="https://github.com/goodguyjay"><i class="fa fa-github fa-fw"></i>Goodguyjay</button>
                         <button class="btn btn-primary btn-mt btn-default border rounded" target="_blank" type="button" href="https://github.com/DKRANGEL"><i class="fa fa-github fa-fw"></i>DKRANGEL</button>
                         <button class="btn btn-primary btn-mt btn-default border rounded" target="_blank" type="button" href="https://github.com/goodguyjay"><i class="fa fa-github fa-fw"></i>haonmeireles1</button>
-                        <button class="btn btn-primary btn-mt btn-default border rounded" target="_blank" type="button" href="https://github.com/haonmeireles1"><i class="fa fa-github fa-fw"></i>Github</button>
+                        <button class="btn btn-primary btn-mt btn-default border rounded" target="_blank" type="button" href="https://github.com/haonmeireles1"><i class="fa fa-github fa-fw"></i>placeholder</button>
                     </div>
                 </div>
             </div>
@@ -91,28 +95,29 @@
     </section>
     <section class="text-center" id="pesquisar">
         <h2>Pesquisar</h2>
-        <nav class="navbar bg-body-black" id="mainNav">
+            <!--removi a tag da navbar pq ja ta la em cima e tava bugando o menu
+            mobile e removi o id da section tb-->
             <div class="container-fluid d-flex justify-content-center">
               <form class="d-flex col-md-5" role="search">
                 <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
                 <button class="btn btn-outline-success" type="submit">Search</button>
               </form>
             </div>
-        </nav>
+
     </section>
     <footer>
         <div class="container text-center">
             <p>Copyright ©&nbsp;UCB 2023</p>
         </div>
     </footer>
-    <div class="map-clean"></div>
+    <!--<div class="map-clean"></div>-->
     <script src="assets/bootstrap/js/bootstrap.min.js"></script>
     <script src="assets/js/aos.min.js"></script>
     <script src="assets/js/bs-init.js"></script>
     <script src="assets/js/grayscale.js"></script>
     <script src="./assets/js/script.js"></script>
     <script src="./assets/js/scriptParallax.js"></script>
-    <script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+    <!--<script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>-->
 </body>
 
 </html>

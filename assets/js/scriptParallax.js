@@ -32,18 +32,18 @@ window.addEventListener('scroll', function() {
 */
 
 function parallaxScroll() {
-    var scrollPosition = window.scrollY;
+    let scrollPosition = window.scrollY;
 
     // Efeito para o cabeçalho
-    var bgParallaxHeader = document.querySelector('.masthead');
-    var limitHeader = bgParallaxHeader.offsetTop + bgParallaxHeader.offsetHeight;
+    let bgParallaxHeader = document.querySelector('.masthead');
+    let limitHeader = bgParallaxHeader.offsetTop + bgParallaxHeader.offsetHeight;
     if (scrollPosition <= limitHeader) {
         bgParallaxHeader.style.backgroundPositionY = (50 - 10 * scrollPosition / limitHeader) + '%';
     }
 
     // Efeito para a seção #locale
-    var bgParallaxLocale = document.getElementById('locale');
-    var limitLocale = bgParallaxLocale.offsetTop + bgParallaxLocale.offsetHeight;
+    let bgParallaxLocale = document.getElementById('locale');
+    let limitLocale = bgParallaxLocale.offsetTop + bgParallaxLocale.offsetHeight;
     if (scrollPosition <= limitLocale) {
         bgParallaxLocale.style.backgroundPositionY = (50 - 10 * scrollPosition / limitLocale) + '%';
     }

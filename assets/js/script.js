@@ -15,8 +15,6 @@ async function getNerdFactsFromNasa() {
     titleHtmlElement[0].innerHTML = title; // o título
     textHtmlElement[0].innerHTML = text; // a explicação
     dateHtmlElement[0].innerHTML = currentDate; // atualizando a data atual
-
-    //console.log(textHtmlElement[0].innerHTML);
 }
 
 getNerdFactsFromNasa();
