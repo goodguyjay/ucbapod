@@ -14,39 +14,41 @@
     <link rel="stylesheet" href="assets/css/parallax.css">
 </head>
 
-<body id="page-top" data-bs-spy="scroll" data-bs-target="#mainNav" data-bs-offset="77">
-    <nav class="navbar navbar-expand-md fixed-top" id="mainNav">
-        <div class="container"><a class="navbar-brand" href="#">UCB APOD</a><button data-bs-toggle="collapse" class="navbar-toggler navbar-toggler-right" data-bs-target="#navbarResponsive" type="button" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation" value="Menu"><i class="fa fa-bars"></i></button>
+<body class="container" id="page-top" data-bs-spy="scroll" data-bs-target="#mainNav" data-bs-offset="77">
+    <nav class="container navbar navbar-expand-md fixed-top" id="mainNav">
+            <a class="navbar-brand" href="#">UCB APOD</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
         <div class="collapse navbar-collapse" id="navbarNav">
-          <ul class="navbar-nav ms-auto">
-            <li class="nav-item nav-link">
-              <a class="nav-link active" href="index.html">Inicio</a>
-            </li>
-            <li class="nav-item nav-link">
-              <a class="nav-link" href="#about">Sobre a imagem</a>
-            </li>
-            <li class="nav-item nav-link">
-              <a class="nav-link" href="error-page.html">Fórum(Em implementação)</a>
-            </li>
-            <li class="nav-item nav-link">
-              <a class="nav-link" href="#locale">Sobre a UCB</a>
-            </li>
-            <li class="nav-item nav-link">
-                <a class="nav-link" href="#contact">Contato</a>
-            </li>
-            <!--<li class="nav-item nav-link">
-                <a class="nav-link" href="#pesquisar">Pesquisar</a>
-            </li> comentado pq ele nao ta ficando em foco na navbar-->
-          </ul>
-        </div>
-        </div>
-      </nav>
+            <ul class="navbar-nav ms-auto">
+                <li class="nav-item nav-link">
+                    <a class="nav-link" href="index.html">Inicio</a>
+                </li>
+                <li class="nav-item nav-link">
+                    <a class="nav-link" href="#about">Sobre a imagem</a>
+                </li>
+                <li class="nav-item nav-link">
+                    <a class="nav-link" href="error-page.html">Fórum(Em implementação)</a>
+                </li>
+                <li class="nav-item nav-link">
+                    <a class="nav-link" href="#locale">Sobre a UCB</a>
+                </li>
+                <li class="nav-item nav-link">
+                    <a class="nav-link" href="#contact">Contato</a>
+                </li>
+                <li class="nav-item nav-link">
+                    <a class="nav-link" href="#pesquisar">Pesquisar</a>
+                </li>    
+            </ul>    
+        </div>    
+    </nav>
     <header class="masthead" style="background-image: url('#');">
         <div class="intro-body">
             <h1 data-aos="fade-down" data-aos-duration="1000" class="brand-heading">Loading...</h1>
             <div class="container">
                 <div class="row">
-                    <div class="col-lg-8 mx-auto">
+                    <div class="col-lg mx-auto">
                         <a class="btn btn-link btn-circle" role="button" href="#about">
                             <i class="fa fa-angle-double-down animated"></i>
                         </a>
@@ -58,7 +60,7 @@
     <section class="text-center content-section" id="about" style="padding: 100px 0;">
         <div class="container">
             <div class="row">
-                <div class="col-lg-8 mx-auto">
+                <div class="col-lg mx-auto">
                     <h2 data-aos="zoom-in" data-aos-duration="500">sobre</h2>
                     <p class="main-text" data-aos="zoom-in" data-aos-duration="1000">This picture of Andromeda shows not only where stars are now, but where stars will be. The big, beautiful Andromeda Galaxy, M31, is a spiral galaxy a mere 2.5 million light-years away. Image data from space-based and ground-based observatories have been combined here to produce this intriguing composite view of Andromeda at wavelengths both inside and outside normally visible light. The visible light shows where M31's stars are now, highlighted in white and blue hues and imaged by the Hubble, Subaru, and Mayall telescopes. The infrared light shows where M31's future stars will soon form, highlighted in orange hues and imaged by NASA's Spitzer Space Telescope. The infrared light tracks enormous lanes of dust, warmed by stars, sweeping along Andromeda's spiral arms. This dust is a tracer of the galaxy's vast interstellar gas, raw material for future star formation. Of course, the new stars will likely form over the next hundred million years or so. That's well before Andromeda merges with our Milky Way Galaxy in about 5 billion years.</p>
                     <p class="current-date"><strong>2023-10-07</strong></p>
@@ -69,25 +71,30 @@
     </section>
     <section class="text-center download-section content-section" id="locale" style="background-image:url('assets/img/earth.jpg');">
         <div class="container">
-            <div class="col-lg-8 mx-auto">
+            <div class="col-lg mx-auto">
                 <h1 id="students">criado com amor ♥ por estudantes da UCB</h1>
-                <!-- tenta dar uma estilizada nesse mapa também pra ele caber na tela, pode usar um arquivo css só pra ele
-                e usa como base o parallax.css pq ele engloba os dois tipos de tela com pouco codigo-->
-                <iframe class="border border-black border border-5 rounded" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3837.8381009577233!2d-48.03271272389806!3d-15.86510422470214!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x935a2d97a15b0507%3A0x3c3e4472ee75d834!2sUniversidade%20Cat%C3%B3lica%20de%20Bras%C3%ADlia%20-%20C%C3%A2mpus%20Taguatinga!5e0!3m2!1spt-BR!2sbr!4v1700065172420!5m2!1spt-BR!2sbr" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                <iframe class="border border-black border border-5 rounded" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3837.8381009577233!2d-48.03271272389806!3d-15.86510422470214!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x935a2d97a15b0507%3A0x3c3e4472ee75d834!2sUniversidade%20Cat%C3%B3lica%20de%20Bras%C3%ADlia%20-%20C%C3%A2mpus%20Taguatinga!5e0!3m2!1spt-BR!2sbr!4v1700065172420!5m2!1spt-BR!2sbr" width="50%" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
             </div>
         </div>
     </section>
     <section class="text-center content-section" id="contact">
         <div class="container">
             <div class="row">
-                <div class="col-lg-8 mx-auto">
+                <div class="col-lg mx-auto">
                     <h2>Contato</h2>
-                    <div class="gap-4 d-flex justify-content-center">
-                        <!-- tem que dar uma olhada nesses botoes na versao mobile pq eles tao ficando fora da tela-->
-                        <button class="btn btn-primary btn-mt btn-default border rounded" target="_blank" type="button" href="https://github.com/goodguyjay"><i class="fa fa-github fa-fw"></i>Goodguyjay</button>
-                        <button class="btn btn-primary btn-mt btn-default border rounded" target="_blank" type="button" href="https://github.com/DKRANGEL"><i class="fa fa-github fa-fw"></i>DKRANGEL</button>
-                        <button class="btn btn-primary btn-mt btn-default border rounded" target="_blank" type="button" href="https://github.com/goodguyjay"><i class="fa fa-github fa-fw"></i>haonmeireles1</button>
-                        <button class="btn btn-primary btn-mt btn-default border rounded" target="_blank" type="button" href="https://github.com/haonmeireles1"><i class="fa fa-github fa-fw"></i>placeholder</button>
+                    <div class="row justify-content-center">
+                        <div class="col-lg-3">
+                        <button class="ms-3 p-3 btn btn-primary btn-mt btn-default border rounded" target="_blank" type="button" href="https://github.com/goodguyjay"><i class="fa fa-github fa-fw"></i>Goodguyjay</button>
+                        </div>
+                        <div class="col-lg-3">
+                        <button class="mt-2 p-3 ms-3 btn-primary btn-mt btn-default border rounded" target="_blank" type="button" href="https://github.com/DKRANGEL"><i class="fa fa-github fa-fw"></i>DKRANGEL</button>
+                        </div>
+                        <div class="col-lg-3">
+                        <button class="mt-2 p-2 ms-3 btn-primary btn-mt btn-default border rounded" target="_blank" type="button" href="https://github.com/goodguyjay"><i class="fa fa-github fa-fw"></i>haonmeireles1</button>
+                        </div>
+                        <div class="col-lg-3">
+                        <button class="mt-2 p-3 ms-3 btn-primary btn-mt btn-default border rounded" target="_blank" type="button" href="https://github.com/haonmeireles1"><i class="fa fa-github fa-fw"></i>placeholder</button>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -95,15 +102,12 @@
     </section>
     <section class="text-center" id="pesquisar">
         <h2>Pesquisar</h2>
-            <!--removi a tag da navbar pq ja ta la em cima e tava bugando o menu
-            mobile e removi o id da section tb-->
             <div class="container-fluid d-flex justify-content-center">
-              <form class="d-flex col-md-5" role="search">
-                <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-                <button class="btn btn-outline-success" type="submit">Search</button>
+              <form class="d-flex justify-content-center col-md-5" role="search">
+                <input id="date" type="date" class="border rounded-2 me-2" />
+                <button class="btn btn-outline-success border rounded-2" type="submit">Search</button>
               </form>
             </div>
-
     </section>
     <footer>
         <div class="container text-center">
