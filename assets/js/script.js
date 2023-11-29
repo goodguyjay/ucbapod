@@ -25,7 +25,7 @@ async function getNerdFactsFromNasa() {
 async function translateText(text) {
     // manda o texto pro python em texto
     // esse fetch é de um servidor python remoto que montei em outro link
-    const response = await fetch("http://goodguyjay.pythonanywhere.com/translate", {
+    const response = await fetch("https://goodguyjay.pythonanywhere.com/translate", {
         method: "POST",
         headers: {
             "Content-Type": "application/json",
