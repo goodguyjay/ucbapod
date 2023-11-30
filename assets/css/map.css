@@ -1,0 +1,6 @@
+@media (min-width: 992px) {
+    #map {
+        min-height: 600px;
+        width: 75%;
+    }
+}
