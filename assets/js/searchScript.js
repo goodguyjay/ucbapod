@@ -1,17 +1,32 @@
-async function getNerdFactsFromNasa() {
-    const response = await fetch("https://api.nasa.gov/planetary/apod?api_key=kk8XIrZkoapbPOnaIFiZTMbKW0Fo6OKw2wTbSJbo");
+document.addEventListener("DOMContentLoaded", function() {
+
+    let form = document.getElementById("search-form");
+
+    form.addEventListener("submit", function(event) {
+        event.preventDefault(); //previne a pagina dar reload
+        getNewsByDate();
+    })
+})
+
+async function getNewsByDate() {
+    let dateInput = document.getElementById("date").value;
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+    let titleHtmlElement = document.getElementsByClassName("brand-heading");
+    let imageHeader = document.getElementById('imageHeader');
+
+    if(dateInput){
+        titleHtmlElement[0].innerHTML = "Loading...";
+        imageHeader.classList.add("fade-out"); // adicionar um fade no background enquanto carrega a outra
+        await getSpecificNewsFromNasa(dateInput);
+    }
+}
+async function getSpecificNewsFromNasa(dateInput) {
+    const response = await fetch(`https://api.nasa.gov/planetary/apod?date=${dateInput}&api_key=kk8XIrZkoapbPOnaIFiZTMbKW0Fo6OKw2wTbSJbo`);
     const data = await response.json();
     const title = data.title;
     const backgroundImg = data.hdurl;
     const text = data.explanation;
     const currentDate = data.date;
-
-    let imageHeader = document.getElementById('imageHeader');
-
-    imageHeader.style.backgroundImage = "url('"+backgroundImg+"')";
-
-    // removendo o fade:
-    imageHeader.classList.remove("fade-out");
 
     //titulo traduzido
     const translatedTitle = await translateText(title);
@@ -23,9 +38,10 @@ async function getNerdFactsFromNasa() {
     let dateHtmlElement = document.getElementsByClassName("current-date");
 
     imgHtmlElement[0].style.backgroundImage = `url(\"${backgroundImg}\")`; // o background
+    imgHtmlElement[0].classList.remove("fade-out"); // removendo o fade-out
     titleHtmlElement[0].innerHTML = translatedTitle; // o título
     textHtmlElement[0].innerHTML = translatedText; // a explicação
-    dateHtmlElement[0].innerHTML = currentDate; // atualizando a data atual
+    dateHtmlElement[0].innerHTML = currentDate;
 }
 
 //essa função é pra mandar a requisição de tradução do texto pro meu servidor
@@ -49,24 +65,3 @@ async function translateText(text) {
     const translatedText = await response.json();
     return translatedText.translated_text;
 }
-
-function downloadImage() {
-    // pega a url da imagem
-    let style = document.getElementById('imageHeader').style.backgroundImage;
-    let url = style.slice(5, style.length - 2); // remove o 'url("' no começo '")' e no fim
-
-    // cria um elemento a escondido
-    let a = document.createElement('a');
-    a.href = url;
-    a.target = '_blank'; // abre o link em uma nova tab
-
-    // adiciona o elemento a escondido e clica nele
-    document.body.appendChild(a);
-    a.click();
-
-    // remove o a do corpo
-    document.body.removeChild(a);
-}
-
-
-getNerdFactsFromNasa();

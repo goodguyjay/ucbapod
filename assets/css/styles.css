@@ -1,7 +1,3 @@
-.nav-menu > li {
-    padding: 0 0 0 30px;
-}
-
 #contact button {
     width: 215px;
 }
@@ -16,10 +12,6 @@
         height: 100vh;
     }
 
-/*    #dropdown-button {
-        text-shadow: 1px 0 0 black, -1px 0 0 black, 0 1px 0 black, 0 -1px 0 black, 1px 1px black, -1px -1px 0 black, 1px -1px 0 black, -1px 1px 0 black;
-    }*/
-
     #locale {
         height: 100vh;
     }
@@ -27,4 +19,6 @@
     #contact {
         padding-bottom: 120px;
     }
+
+
 }
