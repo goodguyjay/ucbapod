@@ -1,3 +1,7 @@
 .nav-menu > li {
     padding: 0 0 0 30px;
 }
+
+#contact button {
+    width: 215px;
+}
