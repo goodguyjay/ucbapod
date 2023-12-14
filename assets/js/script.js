@@ -1,5 +1,5 @@
 async function getNerdFactsFromNasa() {
-    const response = await fetch("https://api.nasa.gov/planetary/apod?api_key=kk8XIrZkoapbPOnaIFiZTMbKW0Fo6OKw2wTbSJbo");
+    const response = await fetch("https://api.nasa.gov/planetary/apod?api_key=DEMO_KEY");
     const data = await response.json();
     const title = data.title;
     const backgroundImg = data.hdurl;
