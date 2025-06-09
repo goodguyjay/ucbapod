@@ -1,12 +1,12 @@
 <!DOCTYPE html>
-<html data-bs-theme="light" lang="en">
+<html lang="en">
 
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
     <title>Home - UCB</title>
     <meta name="description" content="Em desenvolvimento">
-    <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css">
+    <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic&amp;display=swap">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Cabin:700&amp;display=swap">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Noto+Sans+Inscriptional+Pahlavi&amp;display=swap">
@@ -14,28 +14,23 @@
     <!--<link rel="stylesheet" href="assets/css/Clean-Button-Scale-Hover-Effect.css">-->
 </head>
 
-<body id="page-top" data-bs-spy="scroll" data-bs-target="#mainNav" data-bs-offset="77">
-    <nav class="navbar navbar-expand-md fixed-top navbar-light" id="mainNav">
-        <div class="container"><a class="navbar-brand" href="index.html">UCB APOD</a><button data-bs-toggle="collapse" class="navbar-toggler navbar-toggler-right" data-bs-target="#navbarResponsive" type="button" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation" value="Menu"><i class="fa fa-bars"></i></button>
-            <div class="collapse navbar-collapse" id="navbarResponsive">
-                <ul class="navbar-nav ms-auto">
-                    <li class="nav-item nav-link"></li>
-                    <li class="nav-item nav-link"></li>
-                    <li class="nav-item nav-link"><a class="nav-link" href="index.html">Voltar</a></li>
-                </ul>
-            </div>
+<body id="page-top">
+    <nav id="mainNav" class="fixed top-0 left-0 right-0 bg-white/80 backdrop-blur shadow">
+        <div class="container mx-auto flex items-center justify-between p-4">
+            <a class="text-xl font-semibold" href="index.html">UCB APOD</a>
+            <button id="navToggle" class="md:hidden text-gray-700" type="button">
+                <i class="fa fa-bars"></i>
+            </button>
+            <ul id="navbarNav" class="hidden md:flex space-x-4">
+                <li><a class="text-gray-700 hover:text-blue-600" href="index.html">Voltar</a></li>
+            </ul>
         </div>
     </nav>
     <header class="masthead" style="background-image:url('assets/img/earth.jpg');">
-        <div class="intro-body">
-            <div class="container">
-                <div class="row">
-                    <div class="col-lg-8 mx-auto">
-                        <h1 class="brand-heading">Oh não!</h1>
-                        <p class="intro-text">Esta página ainda está em desenvolvimento :(</p><a class="btn btn-link btn-circle" role="button" href="index.html"><i class="fa fa-angle-double-down animated" style="transform: translate(-3px) translateX(4px) translateY(-2px) translateZ(0px) rotate(90deg);"></i></a>
-                    </div>
-                </div>
-            </div>
+        <div class="intro-body flex flex-col items-center justify-center text-center h-screen">
+            <h1 class="brand-heading text-white drop-shadow text-4xl md:text-6xl">Oh não!</h1>
+            <p class="intro-text">Esta página ainda está em desenvolvimento :(</p>
+            <a class="mt-10 text-white animate-bounce" href="index.html"><i class="fa fa-angle-double-down animated" style="transform: translate(-3px) translateX(4px) translateY(-2px) translateZ(0px) rotate(90deg);"></i></a>
         </div>
     </header>
     <div class="map-clean"></div>
@@ -44,7 +39,6 @@
             <p>Copyright ©&nbsp;UCB 2023</p>
         </div>
     </footer>
-    <script src="assets/bootstrap/js/bootstrap.min.js"></script>
     <script src="assets/js/grayscale.js"></script>
 </body>
 
