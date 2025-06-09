@@ -7,4 +7,14 @@
       navbar.classList.toggle('hidden');
     });
   }
+
+  const arrow = document.getElementById('dropdown-button');
+  if (arrow) {
+    arrow.addEventListener('click', (e) => {
+      e.preventDefault();
+      document.getElementById('about').scrollIntoView({ behavior: 'smooth' });
+    });
+  }
+
+  window.scrollTo(0, 0);
 })();

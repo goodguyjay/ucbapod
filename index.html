@@ -25,10 +25,9 @@
                 <i class="fa fa-bars"></i>
             </button>
             <ul id="navbarNav" class="hidden flex-col gap-2 absolute top-full left-0 w-full bg-gray-900 text-white text-center md:static md:flex md:flex-row md:gap-6 md:w-auto">
-                <li><a class="hover:text-blue-400" href="#">Inicio</a></li>
-                <li id="img-download"><a class="hover:text-blue-400" href="#" onclick="downloadImage()">Baixar a Imagem</a></li>
+                <li><a class="hover:text-blue-400" href="#page-top">Inicio</a></li>
+                <li id="img-download"><a class="hover:text-blue-400" href="#" onclick="event.preventDefault();downloadImage()">Baixar a Imagem</a></li>
                 <li><a class="hover:text-blue-400" href="#about">Sobre a imagem</a></li>
-                <li><a class="hover:text-blue-400" href="error-page.html">Fórum(Em implementação)</a></li>
                 <li><a class="hover:text-blue-400" href="#locale">Sobre a UCB</a></li>
                 <li><a class="hover:text-blue-400" href="#contact">Contato</a></li>
             </ul>
@@ -38,17 +37,20 @@
         <div class="absolute inset-0 bg-gradient-to-b from-black/60 to-black/80"></div>
         <div class="intro-body relative z-10 flex flex-col items-center text-center">
             <h1 id="title" data-aos="fade-down" data-aos-duration="1000" class="brand-heading text-white drop-shadow-lg text-4xl md:text-6xl">Loading...</h1>
-            <a id="dropdown-button" class="mt-10 text-white animate-bounce" href="#about">
+            <a id="dropdown-button" class="mt-10 text-white animate-bounce" href="#">
                 <i class="fa fa-angle-double-down animated"></i>
             </a>
         </div>
     </header>
-    <section id="about" class="py-24 bg-gray-50 dark:bg-gray-800 text-center">
+    <section id="about" class="min-h-screen flex items-center py-24 bg-gray-50 dark:bg-gray-800 text-center">
         <div class="container mx-auto">
             <h2 data-aos="zoom-in" data-aos-duration="500" class="text-3xl font-semibold mb-8">Sobre</h2>
             <p class="main-text mx-auto max-w-3xl text-gray-700 dark:text-gray-300" data-aos="zoom-in" data-aos-duration="1000" id="main-text">This picture of Andromeda shows not only where stars are now, but where stars will be. The big, beautiful Andromeda Galaxy, M31, is a spiral galaxy a mere 2.5 million light-years away. Image data from space-based and ground-based observatories have been combined here to produce this intriguing composite view of Andromeda at wavelengths both inside and outside normally visible light. The visible light shows where M31's stars are now, highlighted in white and blue hues and imaged by the Hubble, Subaru, and Mayall telescopes. The infrared light shows where M31's future stars will soon form, highlighted in orange hues and imaged by NASA's Spitzer Space Telescope. The infrared light tracks enormous lanes of dust, warmed by stars, sweeping along Andromeda's spiral arms. This dust is a tracer of the galaxy's vast interstellar gas, raw material for future star formation. Of course, the new stars will likely form over the next hundred million years or so. That's well before Andromeda merges with our Milky Way Galaxy in about 5 billion years.</p>
             <p class="current-date font-semibold mt-6 text-gray-600 dark:text-gray-400"><strong>2023-10-07</strong></p>
         </div>
+</section>
+    <section id="solar" class="h-screen bg-black flex items-center justify-center">
+        <div id="three-container" class="w-full h-full"></div>
     </section>
     <section id="locale" class="py-24 bg-cover bg-center text-white" style="background-image:url('assets/img/earth.jpg');">
         <div class="container mx-auto text-center backdrop-brightness-50 py-10 rounded">
@@ -66,12 +68,6 @@
                 <a href="https://github.com/DKRANGEL" target="_blank" class="transform hover:-translate-y-1 transition">
                     <div class="w-full px-4 py-3 bg-gray-800 text-white rounded shadow flex items-center justify-center gap-2"><i class="fa fa-github fa-fw"></i>DKRANGEL</div>
                 </a>
-                <a href="https://github.com/haonmeireles1" target="_blank" class="transform hover:-translate-y-1 transition">
-                    <div class="w-full px-4 py-3 bg-gray-800 text-white rounded shadow flex items-center justify-center gap-2"><i class="fa fa-github fa-fw"></i>haonmeireles1</div>
-                </a>
-                <a href="https://github.com/leticiaengenharia" target="_blank" class="transform hover:-translate-y-1 transition">
-                    <div class="w-full px-4 py-3 bg-gray-800 text-white rounded shadow flex items-center justify-center gap-2"><i class="fa fa-github fa-fw"></i>leticiaengenharia</div>
-                </a>
             </div>
         </div>
     </section>
@@ -87,12 +83,15 @@
     </section>
     <footer class="bg-gray-900 text-white py-6">
         <div class="container mx-auto text-center">
-            <p>&copy; UCB 2023</p>
+            <p>&copy; UCB 2025</p>
         </div>
     </footer>
     <script src="assets/js/aos.min.js"></script>
     <script src="assets/js/bs-init.js"></script>
     <script src="assets/js/grayscale.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/three@0.156.1/build/three.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/three@0.156.1/examples/js/controls/OrbitControls.js"></script>
+    <script src="assets/js/solarSystem.js"></script>
     <script src="./assets/js/script.js"></script>
     <script src="./assets/js/scriptParallax.js"></script>
     <script src="assets/js/searchScript.js"></script>
