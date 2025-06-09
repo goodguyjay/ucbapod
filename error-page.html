@@ -1,50 +1,45 @@
 <!DOCTYPE html>
-<html data-bs-theme="light" lang="en">
+<html lang="en">
 
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
     <title>Home - UCB</title>
     <meta name="description" content="Em desenvolvimento">
-    <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic&amp;display=swap">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Cabin:700&amp;display=swap">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Noto+Sans+Inscriptional+Pahlavi&amp;display=swap">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@400;600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="assets/fonts/font-awesome.min.css">
     <!--<link rel="stylesheet" href="assets/css/Clean-Button-Scale-Hover-Effect.css">-->
 </head>
 
-<body id="page-top" data-bs-spy="scroll" data-bs-target="#mainNav" data-bs-offset="77">
-    <nav class="navbar navbar-expand-md fixed-top navbar-light" id="mainNav">
-        <div class="container"><a class="navbar-brand" href="index.html">UCB APOD</a><button data-bs-toggle="collapse" class="navbar-toggler navbar-toggler-right" data-bs-target="#navbarResponsive" type="button" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation" value="Menu"><i class="fa fa-bars"></i></button>
-            <div class="collapse navbar-collapse" id="navbarResponsive">
-                <ul class="navbar-nav ms-auto">
-                    <li class="nav-item nav-link"></li>
-                    <li class="nav-item nav-link"></li>
-                    <li class="nav-item nav-link"><a class="nav-link" href="index.html">Voltar</a></li>
-                </ul>
-            </div>
+<body id="page-top" style="font-family: 'Inter', sans-serif;">
+    <nav id="mainNav" class="fixed top-0 left-0 right-0 z-50 bg-gray-900/70 backdrop-blur-md text-white">
+        <div class="container mx-auto flex items-center justify-between px-4 py-3">
+            <a class="text-2xl font-bold tracking-wide" style="font-family: 'Bebas Neue', sans-serif;" href="index.html">UCB APOD</a>
+            <button id="navToggle" class="md:hidden focus:outline-none" type="button">
+                <i class="fa fa-bars"></i>
+            </button>
+            <ul id="navbarNav" class="hidden flex-col gap-2 absolute top-full left-0 w-full bg-gray-900 text-center md:static md:flex md:flex-row md:gap-6 md:w-auto">
+                <li><a class="hover:text-blue-400" href="index.html">Voltar</a></li>
+            </ul>
         </div>
     </nav>
-    <header class="masthead" style="background-image:url('assets/img/earth.jpg');">
-        <div class="intro-body">
-            <div class="container">
-                <div class="row">
-                    <div class="col-lg-8 mx-auto">
-                        <h1 class="brand-heading">Oh não!</h1>
-                        <p class="intro-text">Esta página ainda está em desenvolvimento :(</p><a class="btn btn-link btn-circle" role="button" href="index.html"><i class="fa fa-angle-double-down animated" style="transform: translate(-3px) translateX(4px) translateY(-2px) translateZ(0px) rotate(90deg);"></i></a>
-                    </div>
-                </div>
-            </div>
+    <header class="masthead relative bg-cover bg-center h-screen" style="background-image:url('assets/img/earth.jpg');">
+        <div class="absolute inset-0 bg-gradient-to-b from-black/60 to-black/80"></div>
+        <div class="intro-body relative z-10 flex flex-col items-center justify-center text-center h-full">
+            <h1 class="brand-heading text-white drop-shadow-lg text-4xl md:text-6xl">Oh não!</h1>
+            <p class="intro-text text-white">Esta página ainda está em desenvolvimento :(</p>
+            <a class="mt-10 text-white animate-bounce" href="index.html"><i class="fa fa-angle-double-down animated" style="transform: translate(-3px) translateX(4px) translateY(-2px) translateZ(0px) rotate(90deg);"></i></a>
         </div>
     </header>
     <div class="map-clean"></div>
-    <footer>
-        <div class="container text-center">
-            <p>Copyright ©&nbsp;UCB 2023</p>
+    <footer class="bg-gray-900 text-white py-6">
+        <div class="container mx-auto text-center">
+            <p>&copy; UCB 2025</p>
         </div>
     </footer>
-    <script src="assets/bootstrap/js/bootstrap.min.js"></script>
     <script src="assets/js/grayscale.js"></script>
 </body>
 

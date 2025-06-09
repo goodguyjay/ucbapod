@@ -10,7 +10,7 @@ Para trazer as imagens estelares até você, utilizamos JavaScript para fazer re
 #### Python com Flask e EasyGoogleTranslate
 A magia da tradução acontece nos bastidores, graças ao Python e ao framework Flask. Utilizamos a biblioteca EasyGoogleTranslate para converter as descrições das imagens de estrelas e galáxias para um idioma mais acessível, tornando o universo compreensível para todos. Nosso servidor Flask processa essas traduções com eficiência e rapidez, assegurando que cada explicação astronômica seja tão clara quanto o céu noturno.
 
-#### HTML, CSS e Bootstrap
-A beleza do espaço é refletida em nosso design, graças ao poder do HTML e do CSS, embelezados pelo framework Bootstrap. Nosso site se adapta perfeitamente a diferentes tamanhos de tela, garantindo que sua experiência estelar seja sempre perfeita, seja em um telefone celular, tablet ou desktop. As estrelas brilham para todos, e nosso design garante que todos possam desfrutar dessas vistas cósmicas em qualquer dispositivo.
+#### HTML, CSS e Tailwind
+O visual do site é construído com HTML e CSS utilizando o framework Tailwind CSS. Esse conjunto de utilidades proporciona um design moderno e responsivo, permitindo que a interface se adapte a qualquer tamanho de tela e oferecendo uma experiência estelar em dispositivos móveis ou desktops. Também utilizamos Three.js para uma visualização interativa do sistema solar.
 
 [^1]: Criado por Jay Ramos, Dérick Rangel, Noah Meireles e Letícia Rodrigues da Universidade Católica de Brasília - 2023 [^1]

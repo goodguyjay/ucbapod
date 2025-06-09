@@ -1,13 +1,14 @@
 <!DOCTYPE html>
-<html data-bs-theme="light" lang="pt-br">
+<html lang="pt-br">
 
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
     <title>UCB APOD</title>
-    <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic&amp;display=swap">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Cabin:700&amp;display=swap">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@400;600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="assets/fonts/font-awesome.min.css">
     <link rel="stylesheet" href="assets/css/aos.min.css">
     <link rel="stylesheet" href="assets/css/styles.css">
@@ -16,131 +17,82 @@
     <link rel="stylesheet" href="assets/css/fade.css">
 </head>
 
-<body id="page-top" data-bs-spy="scroll" data-bs-target="#mainNav" data-bs-offset="77">
-    <nav class="container-fluid navbar navbar-expand-md fixed-top" id="mainNav">
-            <a class="ms-2 navbar-brand" href="index.html">UCB APOD</a>
-            <button class="navbar-toggler navbar-toggler-right collapsed" data-bs-toggle="collapse" data-bs-target="#navbarNav" type="button" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation" value="Menu" style="margin-right: 10px;">
-                <i class="fa fa-bars">
-
-                </i>
+<body id="page-top" style="font-family: 'Inter', sans-serif;">
+    <nav id="mainNav" class="fixed top-0 left-0 right-0 z-50 bg-gray-900/70 backdrop-blur-md text-white">
+        <div class="container mx-auto flex items-center justify-between px-4 py-3">
+            <a class="text-2xl font-bold tracking-wide" style="font-family: 'Bebas Neue', sans-serif;" href="index.html">UCB APOD</a>
+            <button id="navToggle" class="md:hidden focus:outline-none" type="button">
+                <i class="fa fa-bars"></i>
             </button>
-        <div class="collapse navbar-collapse" id="navbarNav">
-            <ul class="navbar-nav ms-auto">
-                <li class="nav-item nav link">
-                    <a class="nav-link" href="#">Inicio</a>
-                </li>
-                <li class="nav-item nav link" id="img-download">
-                    <a class="nav-link" href="#" onclick="downloadImage()">Baixar a Imagem</a>
-                </li>
-                <li class="nav-item nav link">
-                    <a class="nav-link" href="#about">Sobre a imagem</a>
-                </li>
-                <li class="nav-item nav link">
-                    <a class="nav-link" href="error-page.html">Fórum(Em implementação)</a>
-                </li>
-                <li class="nav-item nav link">
-                    <a class="nav-link" href="#locale">Sobre a UCB</a>
-                </li>
-                <li class="nav-item nav link">
-                    <a class="nav-link" href="#contact">Contato</a>
-                </li>
+            <ul id="navbarNav" class="hidden flex-col gap-2 absolute top-full left-0 w-full bg-gray-900 text-white text-center md:static md:flex md:flex-row md:gap-6 md:w-auto">
+                <li><a class="hover:text-blue-400" href="#page-top">Inicio</a></li>
+                <li id="img-download"><a class="hover:text-blue-400" href="#" onclick="event.preventDefault();downloadImage()">Baixar a Imagem</a></li>
+                <li><a class="hover:text-blue-400" href="#about">Sobre a imagem</a></li>
+                <li><a class="hover:text-blue-400" href="#locale">Sobre a UCB</a></li>
+                <li><a class="hover:text-blue-400" href="#contact">Contato</a></li>
             </ul>
         </div>
     </nav>
-    <header class="masthead" id="imageHeader" style="background-image: url('#');">
-        <div class="intro-body">
-            <h1 id="title" data-aos="fade-down" data-aos-duration="1000" class="brand-heading">Loading...</h1>
-            <div class="container">
-                <div class="row">
-                    <div class="col-lg mx-auto">
-                        <a id="dropdown-button" class="btn btn-link btn-circle" role="button" href="#about">
-                            <i class="fa fa-angle-double-down animated"></i>
-                        </a>
-                    </div>
-                </div>
-            </div>
+    <header id="imageHeader" class="masthead relative bg-cover bg-center h-screen flex items-center justify-center">
+        <div class="absolute inset-0 bg-gradient-to-b from-black/60 to-black/80"></div>
+        <div class="intro-body relative z-10 flex flex-col items-center text-center">
+            <h1 id="title" data-aos="fade-down" data-aos-duration="1000" class="brand-heading text-white drop-shadow-lg text-4xl md:text-6xl">Loading...</h1>
+            <a id="dropdown-button" class="mt-10 text-white animate-bounce" href="#">
+                <i class="fa fa-angle-double-down animated"></i>
+            </a>
         </div>
     </header>
-    <section class="text-center content-section" id="about" style="padding: 100px 0;">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg mx-auto">
-                    <h2 data-aos="zoom-in" data-aos-duration="500">sobre</h2>
-                    <p class="main-text" data-aos="zoom-in" data-aos-duration="1000" id="main-text">This picture of Andromeda shows not only where stars are now, but where stars will be. The big, beautiful Andromeda Galaxy, M31, is a spiral galaxy a mere 2.5 million light-years away. Image data from space-based and ground-based observatories have been combined here to produce this intriguing composite view of Andromeda at wavelengths both inside and outside normally visible light. The visible light shows where M31's stars are now, highlighted in white and blue hues and imaged by the Hubble, Subaru, and Mayall telescopes. The infrared light shows where M31's future stars will soon form, highlighted in orange hues and imaged by NASA's Spitzer Space Telescope. The infrared light tracks enormous lanes of dust, warmed by stars, sweeping along Andromeda's spiral arms. This dust is a tracer of the galaxy's vast interstellar gas, raw material for future star formation. Of course, the new stars will likely form over the next hundred million years or so. That's well before Andromeda merges with our Milky Way Galaxy in about 5 billion years.</p>
-                    <p class="current-date"><strong>2023-10-07</strong></p>
-                    <p></p>
-                </div>
+    <section id="about" class="min-h-screen flex items-center py-24 bg-gray-50 dark:bg-gray-800 text-center">
+        <div class="container mx-auto">
+            <h2 data-aos="zoom-in" data-aos-duration="500" class="text-3xl font-semibold mb-8">Sobre</h2>
+            <p class="main-text mx-auto max-w-3xl text-gray-700 dark:text-gray-300" data-aos="zoom-in" data-aos-duration="1000" id="main-text">This picture of Andromeda shows not only where stars are now, but where stars will be. The big, beautiful Andromeda Galaxy, M31, is a spiral galaxy a mere 2.5 million light-years away. Image data from space-based and ground-based observatories have been combined here to produce this intriguing composite view of Andromeda at wavelengths both inside and outside normally visible light. The visible light shows where M31's stars are now, highlighted in white and blue hues and imaged by the Hubble, Subaru, and Mayall telescopes. The infrared light shows where M31's future stars will soon form, highlighted in orange hues and imaged by NASA's Spitzer Space Telescope. The infrared light tracks enormous lanes of dust, warmed by stars, sweeping along Andromeda's spiral arms. This dust is a tracer of the galaxy's vast interstellar gas, raw material for future star formation. Of course, the new stars will likely form over the next hundred million years or so. That's well before Andromeda merges with our Milky Way Galaxy in about 5 billion years.</p>
+            <p class="current-date font-semibold mt-6 text-gray-600 dark:text-gray-400"><strong>2023-10-07</strong></p>
+        </div>
+</section>
+    <section id="solar" class="h-screen bg-black flex items-center justify-center">
+        <div id="three-container" class="w-full h-full"></div>
+    </section>
+    <section id="locale" class="py-24 bg-cover bg-center text-white" style="background-image:url('assets/img/earth.jpg');">
+        <div class="container mx-auto text-center backdrop-brightness-50 py-10 rounded">
+            <h1 id="students" class="text-3xl font-semibold mb-8 drop-shadow">Criado com amor ♥ por estudantes da UCB</h1>
+            <iframe class="border-4 border-white rounded w-3/4 mx-auto shadow-lg" id="map" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3837.8381009577233!2d-48.03271272389806!3d-15.86510422470214!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x935a2d97a15b0507%3A0x3c3e4472ee75d834!2sUniversidade%20Cat%C3%B3lica%20de%20Bras%C3%ADlia%20-%20C%C3%A2mpus%20Taguatinga!5e0!3m2!1spt-BR!2sbr!4v1700065172420!5m2!1spt-BR!2sbr" width="70%" height="auto" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </div>
+    </section>
+    <section id="contact" class="py-24 bg-gray-100 dark:bg-gray-900 text-center">
+        <div class="container mx-auto">
+            <h2 class="text-3xl font-semibold mb-8">Contato</h2>
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+                <a href="https://github.com/goodguyjay" target="_blank" class="transform hover:-translate-y-1 transition">
+                    <div class="w-full px-4 py-3 bg-gray-800 text-white rounded shadow flex items-center justify-center gap-2"><i class="fa fa-github fa-fw"></i>Goodguyjay</div>
+                </a>
+                <a href="https://github.com/DKRANGEL" target="_blank" class="transform hover:-translate-y-1 transition">
+                    <div class="w-full px-4 py-3 bg-gray-800 text-white rounded shadow flex items-center justify-center gap-2"><i class="fa fa-github fa-fw"></i>DKRANGEL</div>
+                </a>
             </div>
         </div>
     </section>
-    <section class="text-center download-section content-section" id="locale" style="background-image:url('assets/img/earth.jpg');">
-        <div class="container">
-            <div class="col-lg mx-auto">
-                <h1 id="students">criado com amor ♥ por estudantes da UCB</h1>
-                <iframe class="border border-black border border-5 rounded" id="map" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3837.8381009577233!2d-48.03271272389806!3d-15.86510422470214!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x935a2d97a15b0507%3A0x3c3e4472ee75d834!2sUniversidade%20Cat%C3%B3lica%20de%20Bras%C3%ADlia%20-%20C%C3%A2mpus%20Taguatinga!5e0!3m2!1spt-BR!2sbr!4v1700065172420!5m2!1spt-BR!2sbr" width="70%" height="auto" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-            </div>
+    <section id="pesquisar" class="py-12 bg-gradient-to-b from-blue-50 to-white text-center">
+        <h2 class="text-3xl font-semibold mb-6">Pesquisar</h2>
+        <div class="flex justify-center">
+            <form id="search-form" role="search" class="bg-white rounded shadow p-4 flex flex-col sm:flex-row gap-4 w-full max-w-xl">
+                <label for="date" class="sr-only">Data</label>
+                <input id="date" type="date" class="border rounded p-2 flex-1" />
+                <button type="submit" class="px-4 py-2 bg-green-600 text-white rounded">Search</button>
+            </form>
         </div>
     </section>
-    <section class="text-center content-section" id="contact">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg mx-auto">
-                    <h2>Contato</h2>
-                    <div class="row justify-content-center">
-                        <div class="col-lg-3">
-                            <a href="https://github.com/goodguyjay" target="_blank">
-                                <button class="ms-3 p-3 btn btn-primary btn-mt btn-default border rounded" type="button">
-                                    <i class="fa fa-github fa-fw"></i>Goodguyjay
-                                </button>
-                            </a>
-                        </div>
-                        <div class="col-lg-3">
-                            <a href="https://github.com/DKRANGEL" target="_blank">
-                                <button class="ms-3 p-3 btn btn-primary btn-mt btn-default border rounded" type="button">
-                                    <i class="fa fa-github fa-fw"></i>DKRANGEL
-                                </button>
-                            </a>
-                        </div>
-                        <div class="col-lg-3">
-                            <a href="https://github.com/haonmeireles1" target="_blank">
-                                <button class="ms-3 p-3 btn btn-primary btn-mt btn-default border rounded" type="button">
-                                    <i class="fa fa-github fa-fw"></i>haonmeireles1
-                                </button>
-                            </a>
-                        </div>
-                        <div class="col-lg-3">
-                            <a href="https://github.com/leticiaengenharia" target="_blank">
-                                <button class="ms-3 p-3 btn btn-primary btn-mt btn-default border rounded" type="button">
-                                    <i class="fa fa-github fa-fw"></i>leticiaengenharia
-                                </button>
-                            </a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-    <section class="text-center" id="pesquisar">
-        <h2>Pesquisar</h2>
-            <div class="container-fluid d-flex justify-content-center">
-              <form class="d-flex justify-content-center col-md-5" role="search" id="search-form">
-                  <label for="date"></label><input id="date" type="date" class="border rounded-2 me-2" />
-                <button class="btn btn-outline-success border rounded-2" type="submit">Search</button>
-              </form>
-            </div>
-    </section>
-    <footer>
-        <div class="container text-center">
-            <p>Copyright ©&nbsp;UCB 2023</p>
+    <footer class="bg-gray-900 text-white py-6">
+        <div class="container mx-auto text-center">
+            <p>&copy; UCB 2025</p>
         </div>
     </footer>
-    <script src="assets/bootstrap/js/bootstrap.min.js"></script>
     <script src="assets/js/aos.min.js"></script>
     <script src="assets/js/bs-init.js"></script>
     <script src="assets/js/grayscale.js"></script>
     <script src="./assets/js/script.js"></script>
     <script src="./assets/js/scriptParallax.js"></script>
     <script src="assets/js/searchScript.js"></script>
+    <script type="module" src="assets/js/solarSystem.js"></script>
 </body>
 
 </html>
