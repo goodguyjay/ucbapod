@@ -1,4 +1,7 @@
-(document.addEventListener('DOMContentLoaded', () => {
+import * as THREE from 'https://cdn.jsdelivr.net/npm/three@0.156.1/build/three.module.js';
+import { OrbitControls } from 'https://cdn.jsdelivr.net/npm/three@0.156.1/examples/jsm/controls/OrbitControls.js';
+
+document.addEventListener('DOMContentLoaded', () => {
   const container = document.getElementById('three-container');
   if (!container) return;
 
@@ -10,7 +13,7 @@
   renderer.setSize(container.clientWidth, container.clientHeight);
   container.appendChild(renderer.domElement);
 
-  const controls = new THREE.OrbitControls(camera, renderer.domElement);
+  const controls = new OrbitControls(camera, renderer.domElement);
 
   const light = new THREE.PointLight(0xffffff, 1.2);
   scene.add(light);
@@ -55,4 +58,4 @@
   });
 
   animate();
-}));
+});
